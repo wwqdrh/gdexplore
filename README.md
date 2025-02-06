@@ -9,3 +9,9 @@ godot explore 资源管理器
 - `res://assets/hud`
 - `res://assets/sprite`
 - `res://assets/icons/[type]/`
+
+![](./docs/screenshot1.png)
+
+![](./docs/screenshot2.png)
+
+![](./docs/screenshot3.png)

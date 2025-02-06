@@ -249,7 +249,7 @@ func create_bgm_item(file_name: String) -> void:
 	
 	var play_button = Button.new()
 	play_button.text = "Play"
-	play_button.pressed.connect(func(): play_audio(file_name))
+	play_button.pressed.connect(func(): play_bgm(file_name))
 	
 	var stop_button = Button.new()
 	stop_button.text = "Stop"
@@ -269,6 +269,13 @@ func create_bgm_item(file_name: String) -> void:
 
 func play_audio(file_name: String) -> void:
 	var audio_path = "res://assets/audio/" + file_name
+	var stream = load(audio_path)
+	if stream:
+		audio_player.stream = stream
+		audio_player.play()
+
+func play_bgm(file_name: String) -> void:
+	var audio_path = "res://assets/bgm/" + file_name
 	var stream = load(audio_path)
 	if stream:
 		audio_player.stream = stream
